@@ -1,0 +1,12 @@
+#!/bin/bash
+
+git add .
+git commit -m "$1"
+
+if [[ -n "$2" ]]
+then 
+	git tag "$2"
+	git push origin "$2" 
+fi
+
+git push origin
